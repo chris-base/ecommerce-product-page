@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;800&display=swap");
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  border-bottom: 2px solid #f7f8fd;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.logoNavContainer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  background-image: url("../../assets/logo.svg");
+  width: 138px;
+  height: 20px;
+}
+
+#navContainer {
+  height: 100%;
+  margin-left: 20px;
+}
+
+.navButton {
+  height: 100%;
+  margin: 0 5px 0 5px;
+  background-color: transparent;
+  border: none;
+}
+
+.navText {
+  color: #68707d;
+  font-size: 16px;
+  font-family: "Kumbh Sans";
+}
+
+.navText:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.cartUserContainer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+#cartTab {
+  width: 25px;
+  height: 25px;
+  background-image: url("../../assets/icon-cart.svg");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#cartTab:hover {
+  cursor: pointer;
+}
+
+#userIcon {
+  width: 45px;
+  height: 45px;
+  margin-left: 30px;
+  background-image: url("../../assets/image-avatar.png");
+  background-size: 45px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30px;
+}
+
+#userIcon:hover {
+  cursor: pointer;
+  border: 2px solid #ff7d1a;
+  margin: 0 -2px 0 28px;
+}
