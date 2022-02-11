@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;800&display=swap");
+
+#Body {
+  /* background-color: aqua; */
+  height: 80vh;
+  margin: 0 12%;
+  display: flex;
+  flex-direction: row;
+}
+
+#photosContainer {
+  height: 100%;
+  width: 50%;
+  /* background-color: blue; */
+}
+
+#mainPhoto {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+}
+
+#photoCollection {
+  max-width: 500px;
+  /* background-color: purple; */
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.photoPreview {
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.photoPreview:hover {
+  opacity: 0.7;
+}
+
+#infoContainer {
+  height: 100%;
+  width: 50%;
+  background-color: transparent;
+}
+
+#infoInnerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 50px 0 0 50px;
+  font-size: 16px;
+  font-family: "Kumbh Sans";
+}
+
+#productDescription {
+  text-align: left;
+}
+
+#infoTitle {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ff7d1a;
+}
+
+#productTitle {
+  margin-top: 0;
+  text-align: left;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+#productDescription {
+  margin-top: 0;
+  color: #68707d;
+}
+
+#priceDiscountContainer {
+  display: flex;
+}
+#priceDiscountContainer {
+  align-items: center;
+  width: 300px;
+}
+
+#productPrice {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background-color: white;
+  margin: 0;
+}
+
+#discountText {
+  color: #ff7d1a;
+  font-weight: 800;
+  background-color: #ffede0;
+  margin-left: 15px;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+#originalPrice {
+  margin-top: 0;
+  text-decoration: line-through;
+  color: #b6bcc8;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+#quantityAddCartContainer {
+  display: flex;
+  margin-top: 25px;
+}
+
+#quantityContainer {
+  display: flex;
+  background-color: #f7f8fd;
+  align-items: center;
+  height: 50px;
+  width: 130px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+#quantityText {
+  flex: 1.5;
+  font-weight: 800;
+  line-height: 50px;
+}
+
+.quantityButton {
+  width: 20px;
+  height: 100%;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+}
+
+.quantityButtonText {
+  color: #ff7d1a;
+  font-weight: 800;
+  font-size: 20px;
+  height: 100%;
+  margin-top: 0;
+  line-height: 50px;
+}
+
+#addButton {
+  border-radius: 0 10px 10px 0;
+}
+
+#minusButton {
+  border-radius: 10px 0 0 10px;
+}
+
+#addToCartButton {
+  width: 230px;
+  background-color: #ff7d1a;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  display: flex;
+}
+
+#addCartImg {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../public/icon-cart.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7460%) hue-rotate(183deg) brightness(106%) contrast(96%);
+}
+
+#addCartText {
+  color: white;
+  font-weight: 800;
+  font-size: 12px;
+}

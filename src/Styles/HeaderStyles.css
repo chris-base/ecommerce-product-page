@@ -16,7 +16,7 @@
 }
 
 #logo {
-  background-image: url("../../assets/logo.svg");
+  background-image: url("../../public/logo.svg");
   width: 138px;
   height: 20px;
 }
@@ -53,7 +53,7 @@
 #cartTab {
   width: 25px;
   height: 25px;
-  background-image: url("../../assets/icon-cart.svg");
+  background-image: url("../../public/icon-cart.svg");
   background-size: 25px;
   background-repeat: no-repeat;
   background-position: center;
@@ -61,13 +61,14 @@
 
 #cartTab:hover {
   cursor: pointer;
+  filter: saturate(90%) brightness(0);
 }
 
 #userIcon {
   width: 45px;
   height: 45px;
   margin-left: 30px;
-  background-image: url("../../assets/image-avatar.png");
+  background-image: url("../../public/image-avatar.png");
   background-size: 45px;
   background-repeat: no-repeat;
   background-position: center;
