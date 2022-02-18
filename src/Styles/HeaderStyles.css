@@ -24,19 +24,27 @@
 #navContainer {
   height: 100%;
   margin-left: 20px;
+  display: flex;
 }
 
 .navButton {
   height: 100%;
-  margin: 0 5px 0 5px;
-  background-color: transparent;
+  width: 90px;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* background-color: antiquewhite; */
 }
 
 .navText {
   color: #68707d;
   font-size: 16px;
   font-family: "Kumbh Sans";
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .navText:hover {
