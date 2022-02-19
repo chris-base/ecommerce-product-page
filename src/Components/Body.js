@@ -1,8 +1,7 @@
 import "../Styles/BodyStyles.css";
-import { useState, useEffect } from "react";
-// import productImage from "../../assets/image-product-1.jpg";
+import { useState } from "react";
 
-const Body = () => {
+const Body = ({ setPhotoCarousel }) => {
   const [quantityCount, setQuantityCount] = useState(0);
   const [addCartScale, setAddCartScale] = useState(1);
   const [currImageNumber, setCurrImageNumber] = useState(1);
@@ -10,7 +9,7 @@ const Body = () => {
   return (
     <div id='Body'>
       <div id='photosContainer'>
-        <div id='mainPhotoContainer'>
+        <div id='mainPhotoContainer' onClick={() => setPhotoCarousel(true)}>
           <img src={`image-product-${currImageNumber}.jpg`} id='mainPhoto' alt='product' />
         </div>
 

@@ -14,6 +14,10 @@
   /* background-color: blue; */
 }
 
+#mainPhotoContainer {
+  cursor: pointer;
+}
+
 #mainPhoto {
   width: 100%;
   max-width: 500px;
