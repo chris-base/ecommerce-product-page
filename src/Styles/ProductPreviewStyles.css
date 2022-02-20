@@ -27,12 +27,38 @@
 }
 
 #mainPhotoPreviewContainer {
-  width: 500px;
+  width: auto;
   height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nextImgButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.nextImgButton:hover .nextImgImg {
+  filter: brightness(0) saturate(100%) invert(59%) sepia(96%) saturate(2458%) hue-rotate(346deg) brightness(100%) contrast(102%);
+}
+
+.nextImgImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 #mainPhotoPreview {
-  width: 100%;
+  width: 500px;
   height: auto;
   max-width: 500px;
   border-radius: 20px;

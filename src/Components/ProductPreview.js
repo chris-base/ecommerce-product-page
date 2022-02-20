@@ -1,8 +1,8 @@
 import "../Styles/ProductPreviewStyles.css";
 import { useState } from "react";
 
-const ProductPreview = ({ setPhotoCarousel }) => {
-  const [currImageNumber, setImageNumber] = useState(1);
+const ProductPreview = ({ setPhotoCarousel, currPhotoImgNumber }) => {
+  const [currImageNumber, setImageNumber] = useState(currPhotoImgNumber);
 
   return (
     <div id='productPreviewBody'>
@@ -11,9 +11,27 @@ const ProductPreview = ({ setPhotoCarousel }) => {
       </div>
 
       <div id='mainPhotoPreviewContainer'>
-        <div />
-        <img src='image-product-1.jpg' alt='preview' id='mainPhotoPreview' />
-        <div />
+        <div
+          className='nextImgButton'
+          style={{ marginRight: "-25px" }}
+          onClick={() => {
+            currImageNumber === 1 ? setImageNumber(4) : setImageNumber(currImageNumber - 1);
+          }}
+        >
+          <img src='icon-previous.svg' alt='' className='nextImgImg' />
+        </div>
+
+        <img src={`image-product-${currImageNumber}.jpg`} alt='preview' id='mainPhotoPreview' />
+
+        <div
+          className='nextImgButton'
+          style={{ marginLeft: "-25px" }}
+          onClick={() => {
+            currImageNumber === 4 ? setImageNumber(1) : setImageNumber(currImageNumber + 1);
+          }}
+        >
+          <img src='icon-next.svg' alt='' className='nextImgImg' />
+        </div>
       </div>
 
       <div id='overlayPhotoCollection'>

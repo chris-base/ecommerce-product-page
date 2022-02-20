@@ -1,45 +1,44 @@
 import "../Styles/BodyStyles.css";
 import { useState } from "react";
 
-const Body = ({ setPhotoCarousel }) => {
+const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber }) => {
   const [quantityCount, setQuantityCount] = useState(0);
   const [addCartScale, setAddCartScale] = useState(1);
-  const [currImageNumber, setCurrImageNumber] = useState(1);
 
   return (
     <div id='Body'>
       <div id='photosContainer'>
         <div id='mainPhotoContainer' onClick={() => setPhotoCarousel(true)}>
-          <img src={`image-product-${currImageNumber}.jpg`} id='mainPhoto' alt='product' />
+          <img src={`image-product-${currPhotoImgNumber}.jpg`} id='mainPhoto' alt='product' />
         </div>
 
         <div id='photoCollection'>
           {/* 1 */}
           <div
             className='smallPreviewPhotoContainer'
-            style={currImageNumber === 1 ? { border: "2px solid orange" } : {}}
-            onClick={() => setCurrImageNumber(1)}
+            style={currPhotoImgNumber === 1 ? { border: "2px solid orange" } : {}}
+            onClick={() => setCurrPhotoImgNumber(1)}
           >
             <img
               src='image-product-1-thumbnail.jpg'
               alt='preview'
               id=''
               className='photoPreview'
-              style={currImageNumber === 1 ? { opacity: 0.2 } : {}}
+              style={currPhotoImgNumber === 1 ? { opacity: 0.2 } : {}}
             />
           </div>
           {/* 2 */}
           <div
             className='smallPreviewPhotoContainer'
-            style={currImageNumber === 2 ? { border: "2px solid orange" } : {}}
-            onClick={() => setCurrImageNumber(2)}
+            style={currPhotoImgNumber === 2 ? { border: "2px solid orange" } : {}}
+            onClick={() => setCurrPhotoImgNumber(2)}
           >
             <img
               src='image-product-2-thumbnail.jpg'
               alt='preview'
               id=''
               className='photoPreview'
-              style={currImageNumber === 2 ? { opacity: 0.2 } : {}}
+              style={currPhotoImgNumber === 2 ? { opacity: 0.2 } : {}}
             />
           </div>
 
@@ -47,30 +46,30 @@ const Body = ({ setPhotoCarousel }) => {
 
           <div
             className='smallPreviewPhotoContainer'
-            style={currImageNumber === 3 ? { border: "2px solid orange" } : {}}
-            onClick={() => setCurrImageNumber(3)}
+            style={currPhotoImgNumber === 3 ? { border: "2px solid orange" } : {}}
+            onClick={() => setCurrPhotoImgNumber(3)}
           >
             <img
               src='image-product-3-thumbnail.jpg'
               alt='preview'
               id=''
               className='photoPreview'
-              style={currImageNumber === 3 ? { opacity: 0.2 } : {}}
+              style={currPhotoImgNumber === 3 ? { opacity: 0.2 } : {}}
             />
           </div>
 
           {/* 4 */}
           <div
             className='smallPreviewPhotoContainer'
-            style={currImageNumber === 4 ? { border: "2px solid orange" } : {}}
-            onClick={() => setCurrImageNumber(4)}
+            style={currPhotoImgNumber === 4 ? { border: "2px solid orange" } : {}}
+            onClick={() => setCurrPhotoImgNumber(4)}
           >
             <img
               src='image-product-4-thumbnail.jpg'
               alt='preview'
               id=''
               className='photoPreview'
-              style={currImageNumber === 4 ? { opacity: 0.2 } : {}}
+              style={currPhotoImgNumber === 4 ? { opacity: 0.2 } : {}}
             />
           </div>
         </div>
