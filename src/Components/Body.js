@@ -1,8 +1,8 @@
 import "../Styles/BodyStyles.css";
 import { useState } from "react";
 
-const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber }) => {
-  const [quantityCount, setQuantityCount] = useState(0);
+const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, setAmountItemsInCart }) => {
+  const [itemCount, setItemCount] = useState(0);
   const [addCartScale, setAddCartScale] = useState(1);
 
   return (
@@ -98,15 +98,15 @@ const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber }) =
 
           <div id='quantityAddCartContainer'>
             <div id='quantityContainer'>
-              <div className='quantityButton' onClick={() => (quantityCount <= 0 ? null : setQuantityCount(quantityCount - 1))}>
+              <div className='quantityButton' onClick={() => (itemCount <= 0 ? null : setItemCount(itemCount - 1))}>
                 <p id='minusButton' className='quantityButtonText'>
                   -
                 </p>
               </div>
 
-              <p id='quantityText'>{quantityCount}</p>
+              <p id='quantityText'>{itemCount}</p>
 
-              <div className='quantityButton' onClick={() => setQuantityCount(quantityCount + 1)}>
+              <div className='quantityButton' onClick={() => setItemCount(itemCount + 1)}>
                 <p id='addButton' className='quantityButtonText'>
                   +
                 </p>
@@ -118,6 +118,7 @@ const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber }) =
               onClick={() => {
                 setAddCartScale(0.9);
                 setTimeout(() => setAddCartScale(1), 200);
+                setAmountItemsInCart(itemCount);
               }}
               style={{ transform: `scale(${addCartScale})` }}
             >

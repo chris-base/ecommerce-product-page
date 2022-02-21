@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "../Styles/HeaderStyles.css";
+import CartComponent from "./CartComponent";
 
-const Header = () => {
+const Header = ({ amountItemsInCart, setAmountItemsInCart }) => {
   const [currTabClicked, setCurrTabClicked] = useState(0);
+  const [cartActive, setCartActive] = useState(false);
 
   return (
     <div className='Header'>
@@ -47,6 +49,8 @@ const Header = () => {
 
         <div id='userIcon'></div>
       </div>
+
+      <CartComponent amountItemsInCart={amountItemsInCart} setAmountItemsInCart={setAmountItemsInCart} />
     </div>
   );
 };

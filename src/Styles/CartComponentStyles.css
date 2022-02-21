@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;800&display=swap");
+
+#cartComponentContainer {
+  background-color: white;
+  width: 360px;
+  height: 220px;
+  z-index: 3;
+  position: fixed;
+  right: 3%;
+  top: 95px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+#cartTextContainer {
+  flex: 2;
+  display: flex;
+  padding-left: 20px;
+  border-bottom: 2px solid rgba(182, 188, 200, 0.2);
+}
+
+#cartTextText {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: "Kumbh Sans";
+}
+
+#cartItemsContainer {
+  flex: 8;
+}
+
+#cartEmptyText {
+  margin-top: 0;
+  font-size: 17px;
+  font-weight: 800;
+  font-family: "Kumbh Sans";
+  color: #68707d;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cartItemsContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  /* background-color: pink; */
+  flex: 3;
+}
+
+#itemsQuantityContainer {
+  /* background-color: aqua; */
+  display: flex;
+  width: 360px;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+#cartItemPreview {
+  width: auto;
+  height: 65%;
+  border-radius: 10px;
+}
+
+#itemsQuantityTextContainer {
+  justify-content: center;
+}
+
+.cartItemQuantityText {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 16px;
+  font-family: "Kumbh Sans";
+  color: #68707d;
+  align-items: center;
+  line-height: 16px;
+  margin: 5px 15px;
+}
+
+#totalCostText {
+  font-weight: 800;
+  color: black;
+  margin-left: 8px;
+  line-height: 0;
+}
+
+#cartTrashIcon {
+  background-image: url("../../public/icon-delete.svg");
+  width: 18px;
+  height: 18px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#checkoutButtonContainer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 20px;
+  flex: 1;
+}
+
+#checkoutButton {
+  display: flex;
+  flex: 1;
+  width: auto;
+  height: 60%;
+  background-color: #ff7d1a;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+#checkoutButtonText {
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-weight: 800;
+  font-family: "Kumbh Sans";
+  /* font-size: 16px; */
+}
