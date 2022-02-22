@@ -1,12 +1,28 @@
 import "../Styles/CartComponentStyles.css";
+import { useRef, useEffect } from "react";
 
-const CartComponent = ({ amountItemsInCart, setAmountItemsInCart }) => {
+const CartComponent = ({ amountItemsInCart, setAmountItemsInCart, cartActive, setCartActive }) => {
+  const wrapperRef = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside, false);
+    return () => {
+      document.removeEventListener("click", handleClickOutside, false);
+    };
+  }, []);
+
   const isCartEmpty = () => {
     return amountItemsInCart <= 0;
   };
 
+  const handleClickOutside = (event) => {
+    if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      setCartActive(false);
+    }
+  };
+
   return (
-    <div id='cartComponentContainer'>
+    <div id='cartComponentContainer' ref={wrapperRef}>
       <div id='cartTextContainer'>
         <p id='cartTextText'>Cart</p>
       </div>
@@ -26,7 +42,13 @@ const CartComponent = ({ amountItemsInCart, setAmountItemsInCart }) => {
                 </p>
               </div>
 
-              <div id='cartTrashIcon' />
+              <div
+                id='cartTrashIcon'
+                onClick={() => {
+                  setAmountItemsInCart(0);
+                  setTimeout(() => setCartActive(true), 10);
+                }}
+              />
             </div>
 
             <div id='checkoutButtonContainer'>

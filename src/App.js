@@ -8,14 +8,21 @@ const App = () => {
   const [photoCarousel, setPhotoCarousel] = useState(false);
   const [currPhotoImgNumber, setCurrPhotoImgNumber] = useState(1);
   const [amountItemsInCart, setAmountItemsInCart] = useState(0);
+  const [cartActive, setCartActive] = useState(false);
 
   return (
     <div className='App'>
-      <Header amountItemsInCart={amountItemsInCart} setAmountItemsInCart={setAmountItemsInCart} />
+      <Header
+        amountItemsInCart={amountItemsInCart}
+        setAmountItemsInCart={setAmountItemsInCart}
+        cartActive={cartActive}
+        setCartActive={setCartActive}
+      />
       <Body
         setPhotoCarousel={setPhotoCarousel}
         setCurrPhotoImgNumber={setCurrPhotoImgNumber}
         currPhotoImgNumber={currPhotoImgNumber}
+        amountItemsInCart={amountItemsInCart}
         setAmountItemsInCart={setAmountItemsInCart}
       />
       {photoCarousel ? <ProductPreview setPhotoCarousel={setPhotoCarousel} currPhotoImgNumber={currPhotoImgNumber} /> : <></>}

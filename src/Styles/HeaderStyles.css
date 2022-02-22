@@ -73,6 +73,26 @@
   filter: saturate(90%) brightness(0);
 }
 
+#cartQuantityNotifContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff7d1a;
+  padding: 0;
+  border-radius: 10px;
+  margin: -30px 0 0 10px;
+  position: absolute;
+  padding: 1px 8px;
+}
+
+#cartQuantityNotifText {
+  font-size: 10px;
+  font-family: "Kumbh Sans";
+  font-weight: 800;
+  color: white;
+  margin: 0;
+}
+
 #userIcon {
   width: 45px;
   height: 45px;

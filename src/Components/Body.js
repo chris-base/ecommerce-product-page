@@ -1,7 +1,7 @@
 import "../Styles/BodyStyles.css";
 import { useState } from "react";
 
-const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, setAmountItemsInCart }) => {
+const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, amountItemsInCart, setAmountItemsInCart }) => {
   const [itemCount, setItemCount] = useState(0);
   const [addCartScale, setAddCartScale] = useState(1);
 
@@ -118,7 +118,8 @@ const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, set
               onClick={() => {
                 setAddCartScale(0.9);
                 setTimeout(() => setAddCartScale(1), 200);
-                setAmountItemsInCart(itemCount);
+                setAmountItemsInCart(amountItemsInCart + itemCount);
+                setItemCount(0);
               }}
               style={{ transform: `scale(${addCartScale})` }}
             >

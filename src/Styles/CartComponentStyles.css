@@ -3,7 +3,7 @@
 #cartComponentContainer {
   background-color: white;
   width: 360px;
-  height: 220px;
+  height: auto;
   z-index: 3;
   position: fixed;
   right: 3%;
@@ -42,6 +42,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 90px 0;
 }
 
 #cartItemsContainer {
@@ -103,6 +104,7 @@
   background-size: 18px;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 #checkoutButtonContainer {
@@ -116,6 +118,7 @@
   box-sizing: border-box;
   padding: 0 20px;
   flex: 1;
+  /* background-color: aquamarine; */
 }
 
 #checkoutButton {
@@ -130,6 +133,7 @@
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 #checkoutButtonText {
