@@ -1,14 +1,20 @@
 import { useState } from "react";
 import "../Styles/HeaderStyles.css";
 import CartComponent from "./CartComponent";
+import MobileMenuComponent from "./MobileMenuComponent";
 
 const Header = ({ amountItemsInCart, setAmountItemsInCart, cartActive, setCartActive }) => {
   const [currTabClicked, setCurrTabClicked] = useState(0);
+  const [menuDrawerOpen, setMenuDrawerOpen] = useState(false);
 
   return (
     <div className='Header'>
       <div className='logoNavContainer'>
-        <div id='logo'></div>
+        <div id='menu-button' onClick={() => setMenuDrawerOpen(true)} />
+
+        {menuDrawerOpen ? <MobileMenuComponent menuDrawerOpen={menuDrawerOpen} setMenuDrawerOpen={setMenuDrawerOpen} /> : <></>}
+
+        <div id='logo' />
 
         <div id='navContainer'>
           {/* 0 */}

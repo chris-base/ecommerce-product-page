@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;800&display=swap");
+
+#menuComponentContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+}
+
+#menuComponent {
+  width: 300px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#closeMenuButton {
+  margin: 25px 0 30px 25px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../../public/icon-close.svg");
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.menuSectionContainer {
+  margin-left: 25px;
+  width: 80%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menuSectionText {
+  font-size: 18px;
+  font-family: "Kumbh Sans";
+  font-weight: 800;
+}
