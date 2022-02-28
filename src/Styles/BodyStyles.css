@@ -18,6 +18,27 @@
   cursor: pointer;
 }
 
+.nextImgButtonMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  z-index: 2;
+  cursor: pointer;
+  position: absolute;
+  top: 300px;
+}
+
+.nextImgImgMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
 #mainPhoto {
   width: 100%;
   max-width: 500px;
@@ -93,9 +114,16 @@
   line-height: 30px;
 }
 
+#pricesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 #priceDiscountContainer {
   display: flex;
 }
+
 #priceDiscountContainer {
   align-items: center;
   width: 300px;
@@ -123,7 +151,7 @@
   text-decoration: line-through;
   color: #b6bcc8;
   font-weight: 800;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 1px;
 }
 
@@ -149,32 +177,18 @@
 }
 
 .quantityButton {
+  display: flex;
   width: 20px;
   height: 100%;
   align-items: center;
   cursor: pointer;
   flex: 1;
-}
-
-.quantityButtonText {
-  color: #ff7d1a;
-  font-weight: 800;
-  font-size: 20px;
-  height: 100%;
-  margin-top: 0;
-  line-height: 50px;
-}
-
-#addButton {
-  border-radius: 0 10px 10px 0;
-}
-
-#minusButton {
-  border-radius: 10px 0 0 10px;
+  justify-content: space-around;
 }
 
 #addToCartButton {
   width: 230px;
+  height: 50px;
   background-color: #ff7d1a;
   align-items: center;
   justify-content: center;
@@ -205,4 +219,76 @@
   color: white;
   font-weight: 800;
   font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  #Body {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  #quantityAddCartContainer {
+    flex-direction: column;
+  }
+
+  #addToCartButton {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  #Body {
+    flex-direction: column;
+    margin: 0px;
+    align-items: center;
+  }
+
+  #photoCollection {
+    display: none;
+  }
+
+  #photosContainer {
+    width: 100%;
+  }
+
+  #mainPhoto {
+    border-radius: 0;
+    max-width: 100%;
+  }
+
+  #infoContainer {
+    width: 100%;
+  }
+
+  #infoInnerContainer {
+    margin: 10px 25px;
+  }
+
+  #pricesContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  #originalPrice {
+    margin: 0;
+  }
+
+  #quantityAddCartContainer {
+    width: 100%;
+  }
+
+  #quantityContainer {
+    width: 100%;
+  }
+
+  #quantityText {
+    flex: 2;
+  }
+
+  #addToCartButton {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }

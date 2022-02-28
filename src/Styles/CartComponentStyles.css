@@ -5,7 +5,7 @@
   width: 360px;
   height: auto;
   z-index: 3;
-  position: fixed;
+  position: absolute;
   right: 3%;
   top: 95px;
   display: flex;
@@ -143,4 +143,12 @@
   font-weight: 800;
   font-family: "Kumbh Sans";
   /* font-size: 16px; */
+}
+
+@media (max-width: 370px) {
+  #cartComponentContainer {
+    width: 100%;
+    left: 10px;
+    right: 10px;
+  }
 }
