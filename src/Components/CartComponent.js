@@ -1,5 +1,6 @@
 import "../Styles/CartComponentStyles.css";
 import { useRef, useEffect } from "react";
+import photoPrev1 from "./jsImages/image-product-1-thumbnail.jpg";
 
 const CartComponent = ({ amountItemsInCart, setAmountItemsInCart, cartActive, setCartActive }) => {
   const wrapperRef = useRef(null);
@@ -11,14 +12,14 @@ const CartComponent = ({ amountItemsInCart, setAmountItemsInCart, cartActive, se
     };
   }, []);
 
-  const isCartEmpty = () => {
-    return amountItemsInCart <= 0;
-  };
-
   const handleClickOutside = (event) => {
     if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
       setCartActive(false);
     }
+  };
+
+  const isCartEmpty = () => {
+    return amountItemsInCart <= 0;
   };
 
   return (
@@ -33,7 +34,7 @@ const CartComponent = ({ amountItemsInCart, setAmountItemsInCart, cartActive, se
         ) : (
           <div id='cartItemContainer'>
             <div id='itemsQuantityContainer'>
-              <img id='cartItemPreview' src='image-product-1-thumbnail.jpg' alt='' />
+              <img id='cartItemPreview' src={photoPrev1} alt='' />
 
               <div id='itemsQuantityTextContainer'>
                 <p className='cartItemQuantityText'>Fall Limited Edition Sneakers</p>

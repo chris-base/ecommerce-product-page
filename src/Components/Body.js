@@ -1,5 +1,20 @@
 import "../Styles/BodyStyles.css";
 import { useState, useEffect, useRef } from "react";
+import photo1 from "./jsImages/image-product-1.jpg";
+import photo2 from "./jsImages/image-product-2.jpg";
+import photo3 from "./jsImages/image-product-3.jpg";
+import photo4 from "./jsImages/image-product-4.jpg";
+
+import photoPrev1 from "./jsImages/image-product-1-thumbnail.jpg";
+import photoPrev2 from "./jsImages/image-product-2-thumbnail.jpg";
+import photoPrev3 from "./jsImages/image-product-3-thumbnail.jpg";
+import photoPrev4 from "./jsImages/image-product-4-thumbnail.jpg";
+
+import iconPlus from "./jsImages/icon-plus.svg";
+import iconMinus from "./jsImages/icon-minus.svg";
+
+import iconNext from "./jsImages/icon-next.svg";
+import iconPrevious from "./jsImages/icon-previous.svg";
 
 const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, amountItemsInCart, setAmountItemsInCart }) => {
   const [itemCount, setItemCount] = useState(0);
@@ -8,6 +23,7 @@ const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, amo
   // const [fromTopImgButton, setFromTopImgButton] = useState(0);
 
   const photoRef = useRef(null);
+  const productPhotos = [photo1, photo2, photo3, photo4];
 
   useEffect(() => {
     const handleResize = () => {
@@ -39,14 +55,12 @@ const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, amo
                 currPhotoImgNumber === 1 ? setCurrPhotoImgNumber(4) : setCurrPhotoImgNumber(currPhotoImgNumber - 1);
               }}
             >
-              <img src='icon-previous.svg' alt='' className='nextImgImgMobile' />
+              <img src={iconPrevious} alt='' className='nextImgImgMobile' />
             </div>
           ) : (
             <></>
           )}
-
-          <img src={`image-product-${currPhotoImgNumber}.jpg`} id='mainPhoto' alt='product' ref={photoRef} />
-
+          <img src={productPhotos[currPhotoImgNumber - 1]} id='mainPhoto' alt='product' ref={photoRef} />
           {under600px ? (
             <div
               className='nextImgButtonMobile'
@@ -55,7 +69,7 @@ const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, amo
                 currPhotoImgNumber === 4 ? setCurrPhotoImgNumber(1) : setCurrPhotoImgNumber(currPhotoImgNumber + 1);
               }}
             >
-              <img src='icon-next.svg' alt='' className='nextImgImgMobile' />
+              <img src={iconNext} alt='' className='nextImgImgMobile' />
             </div>
           ) : (
             <></>
@@ -69,13 +83,7 @@ const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, amo
             style={currPhotoImgNumber === 1 ? { border: "2px solid orange" } : {}}
             onClick={() => setCurrPhotoImgNumber(1)}
           >
-            <img
-              src='image-product-1-thumbnail.jpg'
-              alt='preview'
-              id=''
-              className='photoPreview'
-              style={currPhotoImgNumber === 1 ? { opacity: 0.2 } : {}}
-            />
+            <img src={photoPrev1} alt='preview' id='' className='photoPreview' style={currPhotoImgNumber === 1 ? { opacity: 0.2 } : {}} />
           </div>
           {/* 2 */}
           <div
@@ -83,13 +91,7 @@ const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, amo
             style={currPhotoImgNumber === 2 ? { border: "2px solid orange" } : {}}
             onClick={() => setCurrPhotoImgNumber(2)}
           >
-            <img
-              src='image-product-2-thumbnail.jpg'
-              alt='preview'
-              id=''
-              className='photoPreview'
-              style={currPhotoImgNumber === 2 ? { opacity: 0.2 } : {}}
-            />
+            <img src={photoPrev2} alt='preview' id='' className='photoPreview' style={currPhotoImgNumber === 2 ? { opacity: 0.2 } : {}} />
           </div>
 
           {/* 3 */}
@@ -99,13 +101,7 @@ const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, amo
             style={currPhotoImgNumber === 3 ? { border: "2px solid orange" } : {}}
             onClick={() => setCurrPhotoImgNumber(3)}
           >
-            <img
-              src='image-product-3-thumbnail.jpg'
-              alt='preview'
-              id=''
-              className='photoPreview'
-              style={currPhotoImgNumber === 3 ? { opacity: 0.2 } : {}}
-            />
+            <img src={photoPrev3} alt='preview' id='' className='photoPreview' style={currPhotoImgNumber === 3 ? { opacity: 0.2 } : {}} />
           </div>
 
           {/* 4 */}
@@ -114,13 +110,7 @@ const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, amo
             style={currPhotoImgNumber === 4 ? { border: "2px solid orange" } : {}}
             onClick={() => setCurrPhotoImgNumber(4)}
           >
-            <img
-              src='image-product-4-thumbnail.jpg'
-              alt='preview'
-              id=''
-              className='photoPreview'
-              style={currPhotoImgNumber === 4 ? { opacity: 0.2 } : {}}
-            />
+            <img src={photoPrev4} alt='preview' id='' className='photoPreview' style={currPhotoImgNumber === 4 ? { opacity: 0.2 } : {}} />
           </div>
         </div>
       </div>
@@ -151,13 +141,13 @@ const Body = ({ setPhotoCarousel, currPhotoImgNumber, setCurrPhotoImgNumber, amo
           <div id='quantityAddCartContainer'>
             <div id='quantityContainer'>
               <div className='quantityButton' onClick={() => (itemCount <= 0 ? null : setItemCount(itemCount - 1))}>
-                <img src='icon-minus.svg' className='quantityButtonImg' alt='' />
+                <img src={iconMinus} className='quantityButtonImg' alt='' />
               </div>
 
               <p id='quantityText'>{itemCount}</p>
 
               <div className='quantityButton' onClick={() => setItemCount(itemCount + 1)}>
-                <img src='icon-plus.svg' className='quantityButtonImg' alt='' />
+                <img src={iconPlus} className='quantityButtonImg' alt='' />
               </div>
             </div>
 
