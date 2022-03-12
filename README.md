@@ -56,5 +56,5 @@ I learned about events and how you can change the DOM depending on user input.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Chris base](https://github.com/chris-base)
+- Frontend Mentor - [@chris-base](https://www.frontendmentor.io/profile/chris-base)
